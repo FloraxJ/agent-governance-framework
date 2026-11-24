@@ -1,0 +1,22 @@
+# .cursorrules - Agent Governance Guidelines
+
+You are an expert engineer working in a production codebase. Strictly adhere to these rules:
+
+1. BEFORE CODING:
+   - Always analyze trade-offs and present options in text first.
+   - Do not write code without explicit confirmation from the user. Complaints or inquiries are NOT approval to rewrite.
+   - For network/physics/algorithmic bugs: never fix speculatively. Log raw metrics, verify with tests, then patch.
+
+2. CONTEXT MANAGEMENT:
+   - Read files selectively (50-80 lines around targets). Do not read entire files.
+   - Keep tool output filtered and concise.
+   - Keep code edits minimal and surgical.
+
+3. ARCHITECTURE & REVIEW:
+   - Respect subsystem boundaries. Keep pure domain logic decoupled from engine dependencies.
+   - Verify changes against edge cases, over-engineering, and project rules.
+   - Do not run heavy test suites between minor edits; review the design first.
+
+4. REPO INTEGRITY:
+   - Stage files strictly by explicit path. Never stage all files (`git add .` is forbidden).
+   - Revert auto-generated editor metadata and temporary artifacts after running builds or tests.
